@@ -11,8 +11,9 @@ public class Main2 {
 	public static void main(String[] args) {
 		int nr1 = 100;
 		long nr2 = 1000000;
-		long result = nr1 + nr2;
-	System.out.println(result);
+		long result = 0;
+		result = nr1 + nr2;
+		System.out.println(result);
 	}
 
 }
