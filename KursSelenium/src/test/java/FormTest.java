@@ -1,3 +1,4 @@
+import com.google.common.collect.Lists;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,10 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class FormTest {
 
@@ -18,7 +20,7 @@ public class FormTest {
 
     @Before
     public void SetUp() {
-        System.setProperty("webdriver.chrome.driver", "/home/kamil/Pulpit/Tester_Automatyczny/03_Repos/KursSelenium/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "C:/Users/Kamil/Desktop/Tester_Automatyczny/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
@@ -31,6 +33,10 @@ public class FormTest {
     @Test
     public void fillTest() {
         driver.get("https://katalon-test.s3.amazonaws.com/demo-aut/dist/html/form.html");
+
+//        for (count == 0) {
+//        driver.findElement(By.id("submit")).click();}
+
         driver.findElement(By.id("first-name")).sendKeys("Karol");
         driver.findElement(By.id("last-name")).sendKeys("Kowalski");
 
@@ -41,10 +47,9 @@ public class FormTest {
 
         for (WebElement element : elements) {
             if (element.getText().equals ("Male")) {
-                element. click();
+                element.click();
                 break;
             }
-
         }
 
         driver.findElement(By.id("dob")).sendKeys("05/22/2010");
@@ -75,17 +80,34 @@ public class FormTest {
     @Test
     public void chechErrors() {
         driver.get("https://katalon-test.s3.amazonaws.com/demo-aut/dist/html/form.html");
+
+
+        driver.findElement(By.id("first-name")).sendKeys("Karol");
+
+
         driver.findElement(By.id("submit")).click();
 
-    }
+        List<String> listOfIds = Arrays.asList("first-name", "last-name", "gender");
+        int counter = 0;
+        for (String elementLocator : listOfIds) {
+            elementLocator = elementLocator + "-error";
+            assertEquals("This field is required.", driver.findElement(By.id(elementLocator)).getText());
+            counter++;
+        }
+        System.out.println(counter);
 
-    private List<String> getListOfIds() {
-        List<String> listId = new ArrayList<>();
-        listId.add("first-name");
-        listId.add("last-name");
-        listId.add("first-name");
-        return listId;
     }
+    public void randomLists() {
+        Random rand = new Random();
+        List<String> randomList1 = Lists.newArrayList("Ł", "ą", " ", "1", "!", "");
 
+        int numberOfElements = 2;
+
+        for (int i = 0; i < numberOfElements; i++) {
+            int randomIndex = rand.nextInt(randomList1.size());
+            String randomElement = randomList1.get(randomIndex);
+            randomList1.remove(randomIndex);
+        }
+    }
 
 }
