@@ -1,3 +1,19 @@
+/*
+W pliku `Main8.java`, jest program, który wypisuje w konsoli
+schemat z `n` gwiazdek, taki jak poniżej.  
+Przeanalizuj go bardzo dokładnie.
+Przykład dla  ```n = 5```:
+
+```
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+```
+
+Używamy do tego zadania pętli zagnieżdżonych!
+*/
 
 public class Main8 {
 

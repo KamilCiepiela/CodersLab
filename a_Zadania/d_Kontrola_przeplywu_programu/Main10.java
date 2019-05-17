@@ -1,3 +1,20 @@
+/*W pliku `Main10.java` napisz program rysujący na podstawie wartości zmiennej `n` następujący schemat (tutaj dla ```n = 5```).  
+
+```
+*
+* *
+* * *
+* * * *
+* * * * *
+```
+
+Możesz to zadanie rozwiązać na dwa sposoby:
+
+1. używając pętli zależnych,
+2. używając pętli niezależnych i instrukcji warunkowej `if`.
+
+*Wzoruj się na poprzednich zadaniach. Trzeba tutaj trochę pomyśleć i rozumieć pętle zagnieżdżone.*
+*/
 
 public class Main10 {
 
