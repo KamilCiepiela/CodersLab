@@ -8,3 +8,10 @@
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/chromedriver.exe
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/KursSelenium.iml
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/target/*.*
+*/.idea/*.*
+*/out/*.*
+*/target/*.*
+*/*.iml
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/target/*.*
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/.idea/*.*
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/out/*.*
