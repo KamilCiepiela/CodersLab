@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2302df4-a19d-49d4-bc3e-ff718240d133" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterDir="false" />
+    <list default="true" id="f2302df4-a19d-49d4-bc3e-ff718240d133" name="Default Changelist" comment="Updated 3 classes">
+      <change afterPath="$PROJECT_DIR$/src/test/java/FormTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FormTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FormTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SearchTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+            <state relative-caret-position="459">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,8 +37,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/FormTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="327">
+              <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/FormTest1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/WikiTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="18" column="114" selection-start-line="18" selection-start-column="114" selection-end-line="18" selection-end-column="114" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,13 +77,17 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/WikiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/SearchTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SearchTest1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/FormTest1.java" />
         <option value="$PROJECT_DIR$/src/test/java/FormTest.java" />
       </list>
     </option>
@@ -83,21 +110,15 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="75" />
     <option name="y" value="34" />
     <option name="width" value="1502" />
     <option name="height" value="786" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -130,11 +151,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="KursSelenium" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KursSelenium" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -142,7 +158,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -156,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FormTest.fillTest">
+  <component name="RunManager" selected="JUnit.FormTest.shouldFillTheForm">
     <configuration name="FormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KursSelenium" />
       <option name="PACKAGE_NAME" value="" />
@@ -166,11 +189,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FormTest.fillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FormTest.shouldFillTheForm" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KursSelenium" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FormTest" />
-      <option name="METHOD_NAME" value="fillTest" />
+      <option name="METHOD_NAME" value="shouldFillTheForm" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,32 +209,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WikiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="KursSelenium" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchTest" />
-      <option name="METHOD_NAME" value="searchTest2" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="WikiTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchTest.searchTest3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="KursSelenium" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchTest" />
-      <option name="METHOD_NAME" value="searchTest3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="JUnit.FormTest" />
+      <item itemvalue="JUnit.SearchTest.searchTest" />
+      <item itemvalue="JUnit.WikiTest" />
+      <item itemvalue="JUnit.FormTest.shouldFillTheForm" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FormTest.fillTest" />
+        <item itemvalue="JUnit.FormTest.shouldFillTheForm" />
+        <item itemvalue="JUnit.WikiTest" />
         <item itemvalue="JUnit.FormTest" />
-        <item itemvalue="JUnit.SearchTest.searchTest3" />
-        <item itemvalue="JUnit.SearchTest.searchTest2" />
         <item itemvalue="JUnit.SearchTest.searchTest" />
       </list>
     </recent_temporary>
@@ -227,62 +244,71 @@
       <option name="presentableId" value="Default" />
       <updated>1557507496888</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated 3 classes">
+      <created>1558099578830</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558099578830</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FormTest_fillTest - 2019.05.13 at 20h 36m 30s.xml">
-      <configuration name="FormTest.fillTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 19h 48m 24s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest_fillTest - 2019.05.13 at 20h 46m 08s.xml">
-      <configuration name="FormTest.fillTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 20h 05m 05s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest_fillTest - 2019.05.13 at 20h 47m 49s.xml">
-      <configuration name="FormTest.fillTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 20h 13m 59s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest_fillTest - 2019.05.13 at 21h 17m 00s.xml">
-      <configuration name="FormTest.fillTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 23h 23m 14s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest_fillTest - 2019.05.13 at 21h 22m 37s.xml">
-      <configuration name="FormTest.fillTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 23h 23m 34s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest_fillTest - 2019.05.13 at 21h 30m 55s.xml">
-      <configuration name="FormTest.fillTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 23h 25m 12s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest_fillTest - 2019.05.13 at 21h 37m 08s.xml">
-      <configuration name="FormTest.fillTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 23h 43m 44s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest - 2019.05.13 at 21h 39m 01s.xml">
-      <configuration name="FormTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 23h 44m 54s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest - 2019.05.13 at 21h 39m 22s.xml">
-      <configuration name="FormTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 23h 45m 39s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FormTest - 2019.05.13 at 21h 42m 07s.xml">
-      <configuration name="FormTest" configurationId="JUnit" />
+    <history-entry file="FormTest_shouldFillTheForm - 2019.05.17 at 23h 46m 52s.xml">
+      <configuration name="FormTest.shouldFillTheForm" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="34" width="1502" height="786" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.35419533" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.20735608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50076103" side_tool="true" weight="0.49322212" />
+      <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39878234" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32792208" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3982684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.32792208" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32876712" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32792208" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -292,6 +318,10 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updated 3 classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated 3 classes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0.jar!/org/openqa/selenium/WebDriver.class">
@@ -318,20 +348,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/SearchTest.class" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/FormTest-1.class" />
     <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="459">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/WikiTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="114" selection-start-line="18" selection-start-column="114" selection-end-line="18" selection-end-column="114" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SearchTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0-sources.jar!/org/openqa/selenium/By.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="420" selection-start-line="420" selection-end-line="420" />
+          <folding>
+            <element signature="e#4139#4140#0" expanded="true" />
+            <element signature="e#4186#4187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/23.6-jre/guava-23.6-jre-sources.jar!/com/google/common/base/Verify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="117" column="21" selection-start-line="117" selection-start-column="21" selection-end-line="117" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FormTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/FormTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="327">
+          <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

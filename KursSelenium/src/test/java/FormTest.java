@@ -1,4 +1,6 @@
+import com.google.common.base.Verify;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -34,44 +36,82 @@ public class FormTest {
         driver.get("https://katalon-test.s3.amazonaws.com/demo-aut/dist/html/form.html");
 
         WebElement firstName = driver.findElement(By.id("first-name"));
-        String name = firstName.getAttribute("name");
-        String inputValue = "Karol";
-        workWithWebElement(firstName, name, inputValue);
+        String name1 = firstName.getAttribute("name");
+        String inputFirstNameValue = "Karol";
+        workWithWebElement(firstName, name1, inputFirstNameValue);
 
-        driver.findElement(By.id("last-name")).sendKeys("Kowalski");
+        WebElement lastName = driver.findElement(By.id("last-name"));
+        String name2 = lastName.getAttribute("name");
+        String inputLastNameValue = "Kowalski";
+        workWithWebElement(lastName, name2, inputLastNameValue);
+
 
         List<WebElement> radioButtons = driver.findElements(By.cssSelector(".radio-inline"));
         radioButtons.get(0).click();
 
         for (WebElement element : radioButtons) {
-            if (element.getText().equals("Male")) {
+            if (element.getText().equals("Male")){
                 element.click();
             }
         }
 
-        driver.findElement(By.id("dob")).sendKeys("06/06/2018");
-        driver.findElement(By.id("address")).sendKeys("Prosta 51");
-        driver.findElement(By.id("email")).sendKeys("karol.kowalski@mailinator.com");
-        driver.findElement(By.id("password")).sendKeys("pass123asdasd");
-        driver.findElement(By.id("company")).sendKeys("Coderslab");
+        WebElement dateOfBirth = driver.findElement(By.id("dob"));
+        String date = dateOfBirth.getAttribute("name");
+        String inputDobValue = "06/06/2018";
+        workWithWebElement(dateOfBirth, date, inputDobValue);
+        driver.findElement(By.id("address")).click();
+
+        WebElement address = driver.findElement(By.id("address"));
+        String address1 = address.getAttribute("name");
+        String inputAddressValue = "Prosta 51";
+        workWithWebElement(address, address1, inputAddressValue);
+
+        WebElement email = driver.findElement(By.id("email"));
+        String email1 = email.getAttribute("name");
+        String inputEmailValue = "karol.kowalski@mailinator.com";
+        workWithWebElement(email, email1, inputEmailValue);
+
+        WebElement password = driver.findElement(By.id("password"));
+        String password1 = password.getAttribute("name");
+        String inputPasswordValue = "pass123";
+        workWithWebElement(password, password1, inputPasswordValue);
+
+        WebElement company = driver.findElement(By.id("company"));
+        String company1 = company.getAttribute("name");
+        String inputCompanyValue = "Coderslab";
+        workWithWebElement(company, company1, inputCompanyValue);
 
         Select roleDropDown = new Select(driver.findElement(By.name("role")));
         roleDropDown.selectByVisibleText("Manager");
 
-        Select jobExpectations = new Select(driver.findElement(By.name("expectation")));
-        jobExpectations.selectByVisibleText("Good teamwork");
+        Select expectations = new Select(driver.findElement(By.name("expectation")));
+        expectations.selectByVisibleText("Good teamwork");
 
-        driver.findElement(By.xpath("//label[text() = 'Read books']")).click();
+        WebElement development = driver.findElement(By.xpath("//label[text() = 'Read books']"));
+        String development1 = development.getAttribute("checkbox");
+        String inputDevelopmentValue = "Read books";
+        workWithSelections(development, development1, inputDevelopmentValue);
+
+        WebElement comment = driver.findElement(By.id("comment"));
+        String comment1 = comment.getAttribute("name");
+        String inputCommentValue = "To jest mój pierwszy automat testowy";
+        workWithWebElement(comment, comment1, inputCommentValue);
 
         driver.findElement(By.id("submit")).click();
-
         assertEquals("Successfully submitted!", driver.findElement(By.id("submit-msg")).getText());
     }
 
     private void workWithWebElement(WebElement firstName, String name, String inputValue) {
         if (firstName.isDisplayed()) {
             firstName.sendKeys(inputValue);
-            System.out.println(name + ":" + inputValue);
+            System.out.println(name + ": " + inputValue);
+        }
+    }
+
+    private void workWithSelections(WebElement expectation, String name, String getValue) {
+        if (expectation.isSelected()) {
+            expectation.click();
+            System.out.println(name + ": " + getValue);
         }
     }
 
