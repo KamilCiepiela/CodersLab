@@ -2,5 +2,9 @@
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/out/*.*
 ../../.idea/workspace.xml
 ../../out/
-
-
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/.idea/*.*
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/out/*.*
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/geckodriver.exe
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/chromedriver.exe
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/KursSelenium.iml
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/target/*.*
