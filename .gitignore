@@ -20,3 +20,6 @@
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/out/
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/.idea/workspace.xml
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/target/test-classes/FormTest.class
+KursCucumber/target/*.*
+KursSelenium/.idea/workspace.xml
+KursSelenium/target/test-classes/FormTest.class
