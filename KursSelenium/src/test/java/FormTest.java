@@ -1,6 +1,5 @@
 import com.google.common.base.Verify;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -39,6 +38,10 @@ public class FormTest {
         String name1 = firstName.getAttribute("name");
         String inputFirstNameValue = "Karol";
         workWithWebElement(firstName, name1, inputFirstNameValue);
+//        driver.findElement(By.id("submit")).click();
+//        Verify.verify(driver.findElement(By.id("submit-msg")).getText().equals("Successfully submitted!"), )
+//        }
+
 
         WebElement lastName = driver.findElement(By.id("last-name"));
         String name2 = lastName.getAttribute("name");
@@ -87,14 +90,11 @@ public class FormTest {
         Select expectations = new Select(driver.findElement(By.name("expectation")));
         expectations.selectByVisibleText("Good teamwork");
 
-        WebElement development = driver.findElement(By.xpath("//label[text() = 'Read books']"));
-        String development1 = development.getAttribute("checkbox");
-        String inputDevelopmentValue = "Read books";
-        workWithSelections(development, development1, inputDevelopmentValue);
+        driver.findElement(By.xpath("//label[text() = 'Read books']")).click();
 
         WebElement comment = driver.findElement(By.id("comment"));
         String comment1 = comment.getAttribute("name");
-        String inputCommentValue = "To jest mój pierwszy automat testowy";
+        String inputCommentValue = "To jest mój pierwszy automat testowy.";
         workWithWebElement(comment, comment1, inputCommentValue);
 
         driver.findElement(By.id("submit")).click();
@@ -108,7 +108,7 @@ public class FormTest {
         }
     }
 
-    private void workWithSelections(WebElement expectation, String name, String getValue) {
+    private void workWithSelection(WebElement expectation, String name, String getValue) {
         if (expectation.isSelected()) {
             expectation.click();
             System.out.println(name + ": " + getValue);
