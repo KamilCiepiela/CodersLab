@@ -13,5 +13,8 @@
 */target/*.*
 */*.iml
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/target/*.*
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/target/
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/.idea/*.*
 ~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursCucumber/out/*.*
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/.idea/workspace.xml
+~/Pulpit/Tester_Automatyczny/03_Repos/CodersLab/KursSelenium/target/test-classes/FormTest.class
