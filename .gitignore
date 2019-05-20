@@ -23,3 +23,15 @@
 KursCucumber/target/*.*
 KursSelenium/.idea/workspace.xml
 KursSelenium/target/test-classes/FormTest.class
+KursSelenium/.idea/*.*
+KursSelenium/out/*.*
+KursSelenium/geckodriver.exe
+KursSelenium/chromedriver.exe
+KursSelenium/KursSelenium.iml
+KursSelenium/target/*.*
+KursCucumber/target/*.*
+KursCucumber/target/
+KursCucumber/.idea/*.*
+KursCucumber/.idea/
+KursCucumber/out/*.*
+KursCucumber/out/
