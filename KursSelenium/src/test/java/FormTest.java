@@ -109,6 +109,7 @@ public class FormTest {
     }
 
     private void workWithSelection(WebElement expectation, String name, String getValue) {
+        //argument getValue raczej powinien się nazywać value, obecna nazwa sugeruje jakby była to metoda
         if (expectation.isSelected()) {
             expectation.click();
             System.out.println(name + ": " + getValue);
