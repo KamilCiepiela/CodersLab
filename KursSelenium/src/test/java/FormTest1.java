@@ -13,6 +13,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class FormTest1 {
+    //klasa nie może się nazywać FormTest1, cyfra jest niedopuszczalna
 
     private WebDriver driver;
 
