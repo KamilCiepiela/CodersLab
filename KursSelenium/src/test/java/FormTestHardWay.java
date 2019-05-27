@@ -160,6 +160,16 @@ public class FormTestHardWay {
         }
     }
 
+<<<<<<< HEAD:KursSelenium/src/test/java/FormTestHardWay.java
+=======
+    private void workWithSelection(WebElement expectation, String name, String getValue) {
+        //argument getValue raczej powinien się nazywać value, obecna nazwa sugeruje jakby była to metoda
+        if (expectation.isSelected()) {
+            expectation.click();
+            System.out.println(name + ": " + getValue);
+        }
+    }
+>>>>>>> efabff5ec74a6a4b9c0e7f1ca0072a55cfbc84b9:KursSelenium/src/test/java/FormTest.java
 
     @Test
     public void checkErrors() {
