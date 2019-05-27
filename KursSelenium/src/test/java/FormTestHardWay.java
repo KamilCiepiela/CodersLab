@@ -64,10 +64,6 @@ public class FormTestHardWay {
 //        }
 
 
-
-
-
-
         WebElement lastName = driver.findElement(By.id("last-name"));
         String name2 = lastName.getAttribute("name");
         String inputLastNameValue = "Kowalski";
@@ -160,16 +156,13 @@ public class FormTestHardWay {
         }
     }
 
-<<<<<<< HEAD:KursSelenium/src/test/java/FormTestHardWay.java
-=======
-    private void workWithSelection(WebElement expectation, String name, String getValue) {
+    private void workWithSelection(WebElement expectation, String name, String Value) {
         //argument getValue raczej powinien się nazywać value, obecna nazwa sugeruje jakby była to metoda
         if (expectation.isSelected()) {
             expectation.click();
-            System.out.println(name + ": " + getValue);
+            System.out.println(name + ": " + Value);
         }
     }
->>>>>>> efabff5ec74a6a4b9c0e7f1ca0072a55cfbc84b9:KursSelenium/src/test/java/FormTest.java
 
     @Test
     public void checkErrors() {

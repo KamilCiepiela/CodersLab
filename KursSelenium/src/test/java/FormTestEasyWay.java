@@ -12,12 +12,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-<<<<<<< HEAD:KursSelenium/src/test/java/FormTestEasyWay.java
 public class FormTestEasyWay {
-=======
-public class FormTest1 {
-    //klasa nie może się nazywać FormTest1, cyfra jest niedopuszczalna
->>>>>>> efabff5ec74a6a4b9c0e7f1ca0072a55cfbc84b9:KursSelenium/src/test/java/FormTest1.java
 
     private WebDriver driver;
 
