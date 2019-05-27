@@ -12,6 +12,7 @@ public class WikiTest {
 
     private static final String LOCATOR = "main-page-column1";
     private static final String MAIN_PAGE_CONTENT = "main-page-content";
+
     private WebDriver driver;
 
     @Before

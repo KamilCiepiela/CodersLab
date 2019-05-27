@@ -1,4 +1,3 @@
-import com.google.common.base.Verify;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,13 +8,32 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import static com.google.common.base.Verify.verify;
 import static org.junit.Assert.assertEquals;
 
 public class FormTest {
 
     private WebDriver driver;
+    private static final List<String> LIST = Arrays.asList("'Read books'", "'Take online courses'", "'Contribute to opensource projects'", "'Join tech cons'", "'Read tech blogs'", "'Via discovery and experiment'");
+//    private static final String DEV1 = "'Read books'";
+//    private static final String DEV2 = "'Take online courses'";
+//    private static final String DEV3 = "'Contribute to opensource projects'";
+//    private static final String DEV4 = "'Join tech cons'";
+//    private static final String DEV5 = "'Read tech blogs'";
+//    private static final String DEV6 = "'Via discovery and experiment'";
+
+//    private void sleep (){
+//        try{
+//            Thread.sleep(3000);
+//        } catch (interruptedException e){
+//            e.printStackTrace();
+//        }
+//    }
+
+
 
     @Before
     public void setUp() {
@@ -39,21 +57,31 @@ public class FormTest {
         String inputFirstNameValue = "Karol";
         workWithWebElement(firstName, name1, inputFirstNameValue);
 //        driver.findElement(By.id("submit")).click();
-//        Verify.verify(driver.findElement(By.id("submit-msg")).getText().equals("Successfully submitted!"), )
+//        try {
+//            verify(driver.findElement(By.id("submit-msg")).getText().equals("Successfully submitted!"));
+//        } catch (VerifyException e) {
+//            e.printStackTrace();
 //        }
+
+
+
+
 
 
         WebElement lastName = driver.findElement(By.id("last-name"));
         String name2 = lastName.getAttribute("name");
         String inputLastNameValue = "Kowalski";
         workWithWebElement(lastName, name2, inputLastNameValue);
+//        driver.manage().timeouts().wait(500);
+//        driver.findElement(By.id("submit")).click();
+//        verify(driver.findElement(By.id("submit-msg")).getText().equals("Successfully submitted!"));
 
 
         List<WebElement> radioButtons = driver.findElements(By.cssSelector(".radio-inline"));
         radioButtons.get(0).click();
 
         for (WebElement element : radioButtons) {
-            if (element.getText().equals("Male")){
+            if (element.getText().equals("Male")) {
                 element.click();
             }
         }
@@ -84,13 +112,27 @@ public class FormTest {
         String inputCompanyValue = "Coderslab";
         workWithWebElement(company, company1, inputCompanyValue);
 
-        Select roleDropDown = new Select(driver.findElement(By.name("role")));
-        roleDropDown.selectByVisibleText("Manager");
+        WebElement roleDropDown = driver.findElement(By.name("role"));
+        String nameDropDownRole = roleDropDown.getAttribute("name");
+        String chosenOption = "Manager";
+        workWithDropdown(roleDropDown, nameDropDownRole, chosenOption);
 
-        Select expectations = new Select(driver.findElement(By.name("expectation")));
-        expectations.selectByVisibleText("Good teamwork");
+        WebElement expectationDropDown = driver.findElement(By.name("expectation"));
+        String nameDropDownExpectation = expectationDropDown.getAttribute("name");
+        String chosenOption1 = "Good teamwork";
+        workWithDropdown(expectationDropDown, nameDropDownExpectation, chosenOption1);
 
-        driver.findElement(By.xpath("//label[text() = 'Read books']")).click();
+//        driver.findElement(By.xpath("//label[text() = 'Take online courses']")).click();
+//        driver.findElement(By.xpath("//label[text() = 'Contribute to opensource projects']")).click();
+//        driver.findElement(By.xpath("//label[text() = 'Via discovery and experiment']")).click();
+//        System.out.println(new StringBuilder().append("development: ").append("Take online courses, ").append("Contribute to opensource projects, ").append("Via discovery and experiment").toString());
+
+        for (String text : LIST) {
+            selectProperCheckBox(text);
+            System.out.println("development: " + text.substring(1,text.length()-1));
+        }
+
+
 
         WebElement comment = driver.findElement(By.id("comment"));
         String comment1 = comment.getAttribute("name");
@@ -101,6 +143,16 @@ public class FormTest {
         assertEquals("Successfully submitted!", driver.findElement(By.id("submit-msg")).getText());
     }
 
+
+    private void selectProperCheckBox(String text) {
+        driver.findElement(By.xpath("//label[text() =" + text + "]")).click();
+    }
+
+    private void workWithDropdown(WebElement webElement, String name, String visibleText) {
+        new Select(webElement).selectByVisibleText(visibleText);
+        System.out.println(name + ": " + visibleText);
+    }
+
     private void workWithWebElement(WebElement firstName, String name, String inputValue) {
         if (firstName.isDisplayed()) {
             firstName.sendKeys(inputValue);
@@ -108,12 +160,6 @@ public class FormTest {
         }
     }
 
-    private void workWithSelection(WebElement expectation, String name, String getValue) {
-        if (expectation.isSelected()) {
-            expectation.click();
-            System.out.println(name + ": " + getValue);
-        }
-    }
 
     @Test
     public void checkErrors() {
@@ -130,6 +176,7 @@ public class FormTest {
         }
 
         System.out.println(counter);
+        assertEquals(Integer.valueOf(8), Integer.valueOf(counter));
 
     }
 
@@ -138,6 +185,11 @@ public class FormTest {
         listId.add("first-name");
         listId.add("last-name");
         listId.add("gender");
+        listId.add("dob");
+        listId.add("address");
+        listId.add("email");
+        listId.add("password");
+        listId.add("company");
         return listId;
     }
 }

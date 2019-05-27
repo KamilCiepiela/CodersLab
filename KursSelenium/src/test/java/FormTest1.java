@@ -50,6 +50,7 @@ public class FormTest1 {
         }
 
         driver.findElement(By.id("dob")).sendKeys("06/06/2018");
+        driver.findElement(By.id("address")).click();
         driver.findElement(By.id("address")).sendKeys("Prosta 51");
         driver.findElement(By.id("email")).sendKeys("karol.kowalski@mailinator.com");
         driver.findElement(By.id("password")).sendKeys("pass123asdasd");
@@ -98,6 +99,11 @@ public class FormTest1 {
         listId.add("first-name");
         listId.add("last-name");
         listId.add("gender");
+        listId.add("dob");
+        listId.add("address");
+        listId.add("email");
+        listId.add("password");
+        listId.add("company");
         return listId;
     }
 }
