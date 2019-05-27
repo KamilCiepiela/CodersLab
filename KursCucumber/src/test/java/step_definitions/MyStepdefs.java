@@ -1,6 +1,6 @@
 package step_definitions;
-
 import cucumber.api.java.en.*;
+import io.cucumber.datatable.DataTable;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,16 +8,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 
 public class MyStepdefs {
 
     private WebDriver driver;
+
+//    training.feature
 
     @Given("something is done")
     public void somethingIsDone() {
@@ -37,11 +36,11 @@ public class MyStepdefs {
 
     @But("we can use a list as well")
     public void weCanUseAListAsWell(List<String> list) {
-        list.forEach(System.out::println); //lambda skrócona
+//        list.forEach(System.out::println); //lambda skrócona
 //        list.forEach(s -> System.out.println(s); //poprawna lambda pełna
-//        for (String animal : list) {
-//            System.out.println(animal);
-//        }
+        for (String animal : list) {
+            System.out.println(animal);
+        }
     }
 
     @Given("people trying singing")
@@ -59,6 +58,8 @@ public class MyStepdefs {
     public void singsHow(String how) {
         System.out.println("***" + how + "***");
     }
+
+//    google_search.feature
 
     @Given("an open browser with Google")
     public void anOpenBrowserWithGoogle() {
@@ -86,17 +87,9 @@ public class MyStepdefs {
         System.out.println(parameter);
         List<WebElement> elements = driver.findElements(By.cssSelector(".rc"));
         assertTrue(elements.get(1).getText().contains(parameter));
+    }
 
-//        for (WebElement element : elements) {  //podejście 2
-//            assertTrue(element.getText().contains(parameter));
-//        }
-
-//        elements.forEach((webElement -> assertTrue((webElement.getText().contains(parameter))))); //podejście 3
-//        List<Boolean> collect = elements.stream().map(webElement -> WebElement.getText().contains(parameter).collect(Collectors.toList)))); //podejście 4
-//        if(collect.equals(false)) {
-//            System.out.println();
-        }
-
+//    formTest1.feature
 
     @Given("there is browser opened with page {string}")
     public void thereIsBrowserOpenedWithPage(String url) {
@@ -107,19 +100,96 @@ public class MyStepdefs {
     }
 
     @When("user clicks on registration button")
-    public void userClicsOnRegistrationButton() {
+    public void userClicksOnRegistrationButton() {
         driver.findElement(By.cssSelector(".bodytxt a")).click();
     }
 
     @Then("user is on registration page")
     public void userIsOnRegistrationPage() {
-        assertEquals("Add New User", driver.getTitle());
+        Assert.assertEquals("Add New User", driver.getTitle());
     }
 
-    @When("user fill all mandatory fields")
+    @When("user fills all mandatory fields")
     public void userFillAllMandatoryFields(List<String> inputValues) {
         driver.findElement(By.name("first_name")).sendKeys(inputValues.get(0));
         driver.findElement(By.name("last_name")).sendKeys(inputValues.get(1));
-
+        driver.findElement(By.name("email")).sendKeys(inputValues.get(2));
+        driver.findElement(By.name("user_name")).sendKeys(inputValues.get(3));
+        driver.findElement(By.name("address1")).sendKeys(inputValues.get(4));
+        driver.findElement(By.name("city")).sendKeys(inputValues.get(5));
+        driver.findElement(By.name("prov")).sendKeys(inputValues.get(6));
+        driver.findElement(By.name("zip")).sendKeys(inputValues.get(7));
+        driver.findElement(By.name("password")).sendKeys(inputValues.get(8));
     }
+
+    @When("user fills all mandatory fields with values:")
+    public void userFillsAllMandatoryFieldsWithValues(DataTable dataTable) {
+        List<List<String>> lists = dataTable.asLists();
+        System.out.println(lists);
+
+        for (List<String> list : lists) {
+            driver.findElement((By.name((list.get(0))))).sendKeys(list.get(1));
+        }
+    }
+
+//    formTest2.feature
+
+    @When("input field firstname is field with (.*)")
+    public void inputFieldFirstnameIsFieldWithFirstnameparameter(String parameter) {
+        driver.findElement(By.name("first_name")).sendKeys(parameter);
+    }
+
+    @When("input field lasttname is field with (.*)")
+    public void inputFieldLasttnameIsFieldWithLastnameparameter(String parameter) {
+        driver.findElement(By.name("last_name")).sendKeys(parameter);
+    }
+
+    @When("input field email is field with (.*)")
+    public void inputFieldEmailIsFieldWithEmailparameter(String parameter) {
+        driver.findElement(By.name("email")).sendKeys(parameter);
+    }
+
+    @When("input field username is field with (.*)")
+    public void inputFieldUsernameIsFieldWithUsernameparameter(String parameter) {
+        driver.findElement(By.name("user_name")).sendKeys(parameter);
+    }
+
+    @When("input field address is field with (.*)")
+    public void inputFieldAddressIsFieldWithAddressParameter(String parameter) {
+        driver.findElement(By.name("address1")).sendKeys(parameter);
+    }
+
+    @When("input field city is field with (.*)")
+    public void inputFieldCityIsFieldWithCityparameter(String parameter) {
+        driver.findElement(By.name("city")).sendKeys(parameter);
+    }
+
+    @When("input field prov is field with (.*)")
+    public void inputFieldProvIsFieldWithProvparameter(String parameter) {
+        driver.findElement(By.name("prov")).sendKeys(parameter);
+    }
+
+    @When("input field zip is field with (.*)")
+    public void inputFieldZipIsFieldWithZipparameter(String parameter) {
+        driver.findElement(By.name("zip")).sendKeys(parameter);
+    }
+
+    @When("input field password is field with (.*)")
+    public void inputFieldPasswordIsFieldWithPasswordparameter(String parameter) {
+        driver.findElement(By.name("password")).sendKeys(parameter);
+    }
+    @Then("submit the form")
+    public void submitTheForm() {
+        driver.findElement(By.name("Submit")).click();
+    }
+
+    @And("close the browser")
+    public void closeTheBrowser() {
+        driver.quit();
+    }
+
+
 }
+
+
+
