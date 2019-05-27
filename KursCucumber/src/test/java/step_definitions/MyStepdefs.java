@@ -89,7 +89,7 @@ public class MyStepdefs {
         assertTrue(elements.get(1).getText().contains(parameter));
     }
 
-//    formTest1.feature
+//    formTestSingleList.feature
 
     @Given("there is browser opened with page {string}")
     public void thereIsBrowserOpenedWithPage(String url) {
@@ -132,7 +132,7 @@ public class MyStepdefs {
         }
     }
 
-//    formTest2.feature
+//    formTestDoubleList.feature
 
     @When("input field firstname is field with (.*)")
     public void inputFieldFirstnameIsFieldWithFirstnameparameter(String parameter) {
