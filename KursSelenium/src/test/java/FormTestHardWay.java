@@ -14,7 +14,7 @@ import java.util.List;
 import static com.google.common.base.Verify.verify;
 import static org.junit.Assert.assertEquals;
 
-public class FormTest {
+public class FormTestHardWay {
 
     private WebDriver driver;
     private static final List<String> LIST = Arrays.asList("'Read books'", "'Take online courses'", "'Contribute to opensource projects'", "'Join tech cons'", "'Read tech blogs'", "'Via discovery and experiment'");

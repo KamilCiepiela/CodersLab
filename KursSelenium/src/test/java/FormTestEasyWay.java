@@ -12,7 +12,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class FormTest1 {
+public class FormTestEasyWay {
 
     private WebDriver driver;
 
