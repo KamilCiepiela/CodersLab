@@ -7,6 +7,10 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
@@ -24,6 +28,7 @@ public class CGMyStepDefs {
         driver.get(url);
     }
 
+
     @When("copy NIP no")
     public void copyNIPNo() {
         nip = driver.findElement(By.id("nipBox")).getText();
@@ -39,9 +44,9 @@ public class CGMyStepDefs {
         driver.get(url);
     }
 
-    @When("user clicks on register button")
+    @When("user clicks on {string} button")
     public void userClicksOnButton() {
-        driver.findElement(By.cssSelector(".link main-page-top__email-input-sent")).submit();
+        driver.findElement(By.cssSelector(".link.main-page-top__email-input-sent")).click();
         assertEquals("Zarejestruj się", driver.findElement(By.cssSelector(".registration__header header")));
     }
 
@@ -122,15 +127,57 @@ public class CGMyStepDefs {
         assertEquals(firstname, driver.findElement(By.id("user-name")).getText());
     }
 
+    @When("user chooses classes while being logged in")
+    public void userChoosesClassesWhileBeingLoggedIn() {
+        driver.findElement(By.className("select-text-desktop")).click();
+        driver.findElement(By.xpath("//li[text()='CSS']")).click();
+        driver.findElement(By.xpath("//input[@class = 'link main-page-top__select-btn']")).click();
+    }
+
+    @When("user is logged in")
+    public void userIsLoggedIn() {
+        driver.findElement(By.cssSelector(".header__button")).click();
+        driver.findElement(By.id("username")).sendKeys("karol.kowalski@mailinator.com");
+        driver.findElement(By.id("password")).sendKeys("Pass123");
+        driver.findElement(By.id("_submit")).click();
+    }
+
+    @And("selects a mentor")
+    public void selectsAMentor() {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//button[text() = 'Rezerwuj']"), 0));
+        driver.findElements(By.xpath("//button[text() = 'Rezerwuj']")).get(2).click();
+    }
+
+    @Then("makes a reservation")
+    public void makesAReservation() {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Zamawiam i płacę']")));
+        driver.findElement(By.className("reservation__modal-textarea")).sendKeys("My problem is ...");
+        driver.findElement(By.xpath("//li[text()='18.05']")).click();
+        driver.findElement(By.xpath("//li[text()='20:00']")).click();
+    }
+
+    @When("user pays for classes")
+    public void userPaysForClasses() {
+        driver.findElement(By.xpath("//button[@class = 'reservation-modal__summary-button button']")).click();
+    }
+
+    @Then("is transferred to PayU webpage")
+    public void isTransferredToPayUWebpage() {
+        driver.findElement(By.xpath("//a[@href = 'https://secure.payu.com/api/v2_1/orders']")).click();
+        Set<String> windowHandles = driver.getWindowHandles();
+        String parentWindow = driver.getWindowHandle();
+        for (String childWindow : windowHandles) {
+            if (!childWindow.equalsIgnoreCase(parentWindow)) {
+                driver.switchTo().window(childWindow);
+            }
+        }
+        assertEquals("PayU", driver.getTitle());
+    }
+
     @And("closes the browser")
     public void closeTheBrowser() {
         driver.quit();
     }
-
-    @When("user clicks on {string} button")
-    public void userClicksOnButton(String parameter) {
-        driver.findElement(By.cssSelector(".link.main-page-top__email-input-sent")).click();
-    }
-
-
 }

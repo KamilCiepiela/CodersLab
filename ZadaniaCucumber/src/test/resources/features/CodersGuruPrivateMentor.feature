@@ -1,6 +1,6 @@
 Feature: Registration on CodersGuru as a private user
 
-  Scenario Outline: User registers as a private user
+  Scenario: User registers as a private user and orders a classes with mentor
     Given an open browser with page "https://men-men-s-01.codersguru.pl/"
     When user clicks on "Załóż konto" button
     Then user moves to registration subpage
@@ -15,7 +15,12 @@ Feature: Registration on CodersGuru as a private user
     Then inputs field appartment with field <appartmentparameter>
     When user fills checkbox with regulations agreement
     Then submits the filled form and confirms logging in
-    When
+#    When user is logged in
+    When user chooses classes while being logged in
+    And selects a mentor
+    Then makes a reservation
+    When user pays for classes
+    Then is transferred to PayU webpage
     And closes the browser
     Examples:
       | emailparameter                | firstnameparameter | lastnameparameter | passwordparameter | repeatpasswordparameter | cityparameter | zipparameter | streetparameter | appartmentparameter |
