@@ -1,6 +1,6 @@
 Feature: Registration on CodersGuru as a private user
 
-  Scenario: User registers as a private user and orders a classes with mentor
+  Scenario Outline: User registers as a private user and orders a classes with mentor
     Given an open browser with page "https://men-men-s-01.codersguru.pl/"
     When user clicks on "Załóż konto" button
     Then user moves to registration subpage
