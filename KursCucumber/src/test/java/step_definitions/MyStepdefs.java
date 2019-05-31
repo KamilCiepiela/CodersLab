@@ -187,9 +187,4 @@ public class MyStepdefs {
     public void closeTheBrowser() {
         driver.quit();
     }
-
-
 }
-
-
-
